@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FluentApi.QueryBuilder.Example.Entities
 {
-    public class Tables
+    public class Table
     {
+        public string TableName { get; set; }
+        public string ParenKey { get; set; }
+        public string ChildKey { get; set; }
     }
 }

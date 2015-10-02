@@ -43,14 +43,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builders\CompareConditionBuilder.cs" />
+    <Compile Include="Builders\Interfaces\IAndDirectionTo.cs" />
+    <Compile Include="Builders\Interfaces\ICheckIfRange.cs" />
+    <Compile Include="Builders\Interfaces\ICheckIfCompare.cs" />
+    <Compile Include="Builders\Interfaces\IFrom.cs" />
+    <Compile Include="Builders\Interfaces\IIs.cs" />
+    <Compile Include="Builders\Interfaces\IJoinOnTable.cs" />
+    <Compile Include="Builders\Interfaces\IOnChildField.cs" />
+    <Compile Include="Builders\Interfaces\ISetOrderOn.cs" />
+    <Compile Include="Builders\Interfaces\ITo.cs" />
+    <Compile Include="Builders\Interfaces\IWithParentField.cs" />
+    <Compile Include="Builders\OrderByBuilder.cs" />
+    <Compile Include="Builders\QueryBuilder.cs" />
+    <Compile Include="Builders\RangeConditionBuilder.cs" />
+    <Compile Include="Builders\TableBuilder.cs" />
     <Compile Include="Entities\CompareCondition.cs" />
     <Compile Include="Entities\ICondition.cs" />
     <Compile Include="Entities\OrderBy.cs" />
     <Compile Include="Entities\Query.cs" />
     <Compile Include="Entities\RangeCondition.cs" />
-    <Compile Include="Entities\Tables.cs" />
+    <Compile Include="Entities\Table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WithBuilderExample.cs" />
+    <Compile Include="WithoutBuilderInitializerExample.cs" />
+    <Compile Include="WithoutBuilderExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
