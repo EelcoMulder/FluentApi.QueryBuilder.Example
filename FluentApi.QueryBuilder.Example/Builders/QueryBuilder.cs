@@ -11,7 +11,16 @@ namespace FluentApi.QueryBuilder.Example.Builders
     public class QueryBuilder
     {
         private readonly Query _query = new Query();
-        public QueryBuilder() {}
+        /// <summary>
+        /// Set table name
+        /// </summary>
+        /// <param name="tableName"></param>
+        /// <returns></returns>
+        public QueryBuilder OnTable(string tableName)
+        {
+            _query.TableName = tableName;
+            return this;
+        }
         /// <summary>
         /// Add column
         /// </summary>
@@ -26,9 +35,10 @@ namespace FluentApi.QueryBuilder.Example.Builders
         /// Add a joined table
         /// </summary>
         /// <returns></returns>
-        public IJoinOnTable AddJoinOnTable()
+        public IWithParentField JoinOnTable(string tableName)
         {
             TableBuilder tableBuilder = new TableBuilder(_query, this);
+            tableBuilder.JoinOnTable(tableName);
             return tableBuilder;
         }
         /// <summary>

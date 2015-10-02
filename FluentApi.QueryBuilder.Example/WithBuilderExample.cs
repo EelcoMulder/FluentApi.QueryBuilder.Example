@@ -12,17 +12,14 @@ namespace FluentApi.QueryBuilder.Example
     {
         public static Query CreateQuery()
         {
-            Builders.QueryBuilder builder = new Builders.QueryBuilder();
-            Query query = builder
+            Query query = new Builders.QueryBuilder()
                 .AddColumn("Column1")
                 .AddColumn("Column2")
                 .AddColumn("Column3")
-                .AddJoinOnTable()
-                    .JoinOnTable("SubTabel1")
+                .JoinOnTable("SubTabel1")
                     .WithParentField("MainTableId")
                     .OnChildField("SubTabel1Id")
-                .AddJoinOnTable()
-                    .JoinOnTable("SubTabel2")
+                .JoinOnTable("SubTabel2")
                     .WithParentField("MainTableId")
                     .OnChildField("SubTabel2Id")
                 .AddRangeCondition()

@@ -35,13 +35,13 @@ namespace FluentApi.QueryBuilder.Example
                 From = 10,
                 To = 40
             };
+            query.Conditions.Add(rangeCondition);
             CompareCondition compareCondition = new CompareCondition
             {
                 Column = "Column2",
                 Compare = CompareType.Equal,
                 Value = "SomeValue"
             };
-            query.Conditions.Add(rangeCondition);
             query.Conditions.Add(compareCondition);
             OrderBy orderBy1 = new OrderBy
             {

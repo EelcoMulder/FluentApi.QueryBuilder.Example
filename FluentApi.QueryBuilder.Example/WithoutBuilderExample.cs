@@ -30,10 +30,12 @@ namespace FluentApi.QueryBuilder.Example
             rangeCondition.Column = "Column1";
             rangeCondition.From = 10;
             rangeCondition.To = 40;
+            query.Conditions.Add(rangeCondition);
             CompareCondition compareCondition = new CompareCondition();
             compareCondition.Column = "Column2";
             compareCondition.Compare = CompareType.Equal;
             compareCondition.Value = "SomeValue";
+            query.Conditions.Add(compareCondition);
             OrderBy orderBy1 = new OrderBy();
             orderBy1.Column = "Column1";
             orderBy1.Direction = OrderByDirection.Ascending;
